@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome To My Dialog Box </h1>
+    <button id="openDialog">Open Dialog</button>
+    <div id="dialogBox" class="dialog">
+        <div class="dialog-content">
+            <span id="closeDialog" class="close">&times;</span>
+            <h2>Hello...!</h2>
+            <p><b>This is a custom dialog box</b></p>
+        </div>
+    </div>
+    <script>
+        let openBtn = document.getElementById("openDialog");
+let closeBtn = document.getElementById("closeDialog");
+let dialog = document.getElementById("dialogBox");
+
+openBtn.onclick = function() {
+    dialog.style.display = "block";
+}
+
+closeBtn.onclick = function() {
+    dialog.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == dialog) {
+        dialog.style.display ="none";
+     }
+}
+    </script>
+</body>
+</html>
+
+     
+   
